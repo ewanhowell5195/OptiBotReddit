@@ -7,6 +7,7 @@
   "author": "Ewan Howell",
   "dependencies": {
     "cheerio": "^1.0.0-rc.12",
+    "difflib": "^0.2.4",
     "snoostorm": "^1.5.2"
   }
 }

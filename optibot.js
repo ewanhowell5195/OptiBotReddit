@@ -1,4 +1,5 @@
 import { CommentStream } from "snoostorm"
+import { getCloseMatches } from "difflib"
 import Snoowrap from "snoowrap"
 import cheerio from "cheerio"
 import path from "path"
@@ -6,11 +7,12 @@ import fs from "fs"
 
 //////////////////////////////////////////////////////////////////////////////////////
 
+globalThis.getCloseMatches = getCloseMatches
 globalThis.cheerio = cheerio
 
 //////////////////////////////////////////////////////////////////////////////////////
 
-globalThis.config = JSON.parse(fs.readFileSync("config.json", "utf-8"))
+globalThis.config = JSON.parse(fs.readFileSync("./json/config.json", "utf-8"))
 
 //////////////////////////////////////////////////////////////////////////////////////
 
