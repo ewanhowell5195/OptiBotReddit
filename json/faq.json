@@ -14,5 +14,9 @@
   {
     "question": "I can't see my cape!",
     "answer": "There are several reasons why it may not be working. Try these steps.\n- First, check that both ``Skin Customization -> Cape`` and ``Video Settings -> Details -> Show Capes`` are set to ON.\n\n- If that doesn't work, make sure that the cape is actually activated on your account. You can do this by going to ``Skin Customization -> OptiFine Cape -> Open Cape Editor`` and it should give you the cape editor. If the cape is not on your account even though it should be, check this FAQ: `My OptiFine cape was stolen! What do I do?`\n\n- Finally, if that doesn't work, check that you can see the purple cape at this address: http://s.optifine.net/capes/ZenW.png. If you cannot see it, please refer to this FAQ: `I can't access the Cape servers/Mojang servers.`\n\nIf you could see the cape at that URL and still cannot see your cape, please seek further support by creating a ticket in [the Discord server](https://discord.gg/3mMpcwW)."
+  },
+  {
+    "question": "My shaders are broken!",
+    "answer": "If your shaders look broken, you can follow these steps to try get them working:\n\n* Check the shader version is correct for your game/OptiFine version\n* Make sure your graphics drivers are up to date. If they are, try reinstalling them!\n* If you are using any other mods, try testing them with standalone OptiFine\n* If the issue only happens with 1 particular shader, go to that specific shaders Discord server and ask about the issue there."
   }
 ]
