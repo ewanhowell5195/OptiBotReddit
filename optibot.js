@@ -127,3 +127,5 @@ comments.on("item", async comment => {
 })
 
 process.on("unhandledRejection", async e => console.error(e))
+
+client.commands.get("faq").execute("e", [])

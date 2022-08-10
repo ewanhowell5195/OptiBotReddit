@@ -9,7 +9,7 @@
   },
   {
     "question": "I can't access the Cape servers/Mojang servers.",
-    "answer": "If you've installed programs such as 999cape, Mantle, or Cloaks+ in the past, you need to uninstall them in order to see OptiFine Capes. If after uninstalling you can't see the cape at this link: [http://s.optifine.net/capes/ZenW.png] then try this.\n\n* Press Windows key + r, it then should open a window called \"run\"\n* Copy and paste this into the window ``powershell -command \"Start-Process notepad $env:windir\system32\drivers\etc\hosts\" -Verb runas``\n* It should open a prompt asking if you want notepad to make changes to your computer, press yes.\n* If there is a line that has s.optifine.net in it, remove it, then press save.\n\n[Video instructions](https://youtu.be/7lOwhAhpHZY)\n\n**Note**: This only works for Windows. If you're on macOS, please ask a support member for help."
+    "answer": "If you've installed programs such as 999cape, Mantle, or Cloaks+ in the past, you need to uninstall them in order to see OptiFine Capes. If after uninstalling you can't see the cape at this link: [http://s.optifine.net/capes/ZenW.png] then try this.\n\n* Press Windows key + r, it then should open a window called \"run\"\n* Copy and paste this into the window ``powershell -command \"Start-Process notepad $env:windir\\system32\\drivers\\etc\\hosts\" -Verb runas``\n* It should open a prompt asking if you want notepad to make changes to your computer, press yes.\n* If there is a line that has s.optifine.net in it, remove it, then press save.\n\n[Video instructions](https://youtu.be/7lOwhAhpHZY)\n\n**Note**: This only works for Windows. If you're on macOS, please ask a support member for help."
   },
   {
     "question": "I can't see my cape!",
