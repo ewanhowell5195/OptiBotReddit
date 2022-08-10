@@ -1,0 +1,12 @@
+{
+  "name": "optibot",
+  "version": "1.0.0",
+  "description": "A bot for the r/optifine subreddit",
+  "type": "module",
+  "exports": "./optibot.js",
+  "author": "Ewan Howell",
+  "dependencies": {
+    "cheerio": "^1.0.0-rc.12",
+    "snoostorm": "^1.5.2"
+  }
+}
