@@ -111,7 +111,6 @@ const comments = new CommentStream(client, {
 })
 
 comments.on("item", async comment => {
-  console.log("comment", comment.author.name)
   if (comment.author.name === client.username) return
   if (config.prefixes.includes(comment.body[0])) {
     comment = await comment.expandReplies({limit: Infinity, depth: 1})
@@ -127,5 +126,3 @@ comments.on("item", async comment => {
 })
 
 process.on("unhandledRejection", async e => console.error(e))
-
-client.commands.get("faq").execute("e", [])
