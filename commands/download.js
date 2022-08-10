@@ -3,7 +3,7 @@ export default {
     description: "Provides various links to download OptiFine."
   },
   aliases: ["site", "optisite", "website", "optifine", "dl"],
-  async execute(comment, args) {
+  async execute(comment) {
     const fields = [["Backup website", "https://optifined.net/downloads"]]
     try {
       const site = cheerio.load(await fetch("https://optifine.net/downloads").then(e => e.text()))
