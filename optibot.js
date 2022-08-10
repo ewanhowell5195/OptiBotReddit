@@ -126,3 +126,5 @@ comments.on("item", async comment => {
 })
 
 process.on("unhandledRejection", async e => console.error(e))
+
+console.log("Client online")
