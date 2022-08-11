@@ -90,7 +90,7 @@ function makeMessage(message) {
   if (message.title) str += `**${message.title}**\n\n`
   if (message.description) str += `${message.description}\n\n`
   if (message.fields) for (const field of message.fields) str += `* **${field[0]}**\n   * ${field[1]}\n\n`
-  return `${str}\n\n^(Beeb boop i am a bot)`
+  return `${str}\n\n^(Beep boop i am a bot)`
 }
 
 globalThis.sendReply = (comment, message) => {
