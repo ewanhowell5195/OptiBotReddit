@@ -1,4 +1,4 @@
-import { CommentStream } from "snoostorm"
+import { CommentStream, SubmissionStream } from "snoostorm"
 import { getCloseMatches } from "difflib"
 import Snoowrap from "snoowrap"
 import cheerio from "cheerio"
@@ -113,7 +113,7 @@ const comments = new CommentStream(client, {
 comments.on("item", async comment => {
   if (comment.author.name === client.username) return
   if (config.prefixes.includes(comment.body[0])) {
-    comment = await comment.expandReplies({limit: Infinity, depth: 1})
+    comment = await comment.expandReplies({ limit: Infinity, depth: 1 })
     if (!comment.replies.find(e => e.author.name === client.username)) {
       const commentParts = comment.body.split(/(?<! ) /)
       const commandName = commentParts[0].substring(1).toLowerCase()
@@ -124,6 +124,25 @@ comments.on("item", async comment => {
     }
   }
 })
+
+const posts = new SubmissionStream(client, {
+  subreddit: "optifine",
+  limit: 1
+})
+
+posts.on("item", async post => {
+  if (post.link_flair_text === "Help") {
+    post = await post.expandReplies({ limit: Infinity, depth: 1 })
+    if (!post.comments.find(e => e.author.name === client.username)) {
+      sendReply(post, {
+        title: "Not getting the help you were looking for?",
+        description: "Join the [OpitFine Discord server](https://discord.gg/3mMpcwW), where we are more active and can more easily provide support!"
+      })
+    }
+  }
+})
+
+//////////////////////////////////////////////////////////////////////////////////////
 
 process.on("unhandledRejection", async e => console.error(e))
 
