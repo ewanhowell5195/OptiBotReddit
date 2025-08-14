@@ -136,7 +136,7 @@ posts.on("item", async post => {
     if (!post.comments.find(e => e.author.name === client.username)) {
       sendReply(post, {
         title: "Not getting the help you were looking for?",
-        description: "Join the [OptiFine Discord server](https://discord.gg/3mMpcwW) for faster support.\n\nUsing a pre-release? Check if the issue also occurs on the previous major full release — if not, it may be a pre-release bug. [Report bugs here](https://github.com/sp614x/optifine/issues)\n\n_Commenters: Please respect Rule 8._"
+        description: "Join the [OptiFine Discord server](https://discord.gg/3mMpcwW) for faster support.\n\nUsing a pre-release? Check if the issue also occurs on the previous major full release. If it does't, it may be a pre-release bug. [Report bugs here](https://github.com/sp614x/optifine/issues)"
       })
     }
   }
